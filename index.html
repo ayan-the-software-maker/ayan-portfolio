@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mohd Ayan - Front-end Developer & Designer Portfolio">
+  <title>Mohd Ayan | Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta name="theme-color" content="#1f242d">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ScrollReveal -->
+  <link rel="stylesheet" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav-logo">Mohd Ayan</a>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-close" id="nav-close" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun theme-icon sun-icon"></i>
+          <i class="fas fa-moon theme-icon moon-icon"></i>
+        </button>
+        <a href="https://calendly.com/mohdayan4673" class="btn btn-primary btn-sm calendly-btn">
+          Let's Talk
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section class="home section" id="home">
+      <div id="particles-js" class="particles-background" aria-hidden="true"></div>
+      <div class="home-gradient-overlay" aria-hidden="true"></div>
+      <div class="home-orbs" aria-hidden="true">
+        <span class="home-orb home-orb-1"></span>
+        <span class="home-orb home-orb-2"></span>
+        <span class="home-orb home-orb-3"></span>
+      </div>
+
+      <div class="home-container container grid">
+        <div class="home-content scroll-fade" data-scroll data-scroll-speed="0.14" data-scroll-direction="left">
+          <span class="home-greeting animate-item">Hello, I'm</span>
+          <h1 class="home-name animate-item">
+            <span class="home-name-text">Mohd Ayan</span>
+          </h1>
+          <h3 class="home-title animate-item">I'm a <span class="typing-text"></span></h3>
+          <p class="home-description animate-item">
+            I'm a passionate Front-end Developer & Designer with expertise in creating
+            beautiful, responsive, and user-friendly web experiences. I love turning
+            ideas into reality through clean code and creative design.
+          </p>
+
+          <div class="home-social animate-item">
+            <a href="https://github.com/ayan-the-software-maker" target="_blank" rel="noopener" class="home-social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mohd-ayan-pasha/" target="_blank" rel="noopener" class="home-social-link"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/+919917023652" target="_blank" rel="noopener" class="home-social-link"
+              aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/mohd.ayan7102" target="_blank" rel="noopener" class="home-social-link"
+              aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+          <div class="home-buttons animate-item">
+            <a href="#contact" class="btn btn-primary calendly-btn magnetic-btn">
+              HIRE ME
+            </a>
+            <a href="images/Mohd-Ayan Resume.pdf" target="_blank" class="btn btn-outline magnetic-btn" download>DOWNLOAD CV</a>
+          </div>
+        </div>
+
+        <div class="home-image hero-visual">
+          <div class="hero-visual-wrap">
+            <div class="hero-orbit-glow" aria-hidden="true"></div>
+
+            <div class="hero-orbit-system">
+              <div class="orbit-ring orbit-ring--outer">
+                <div class="orbit-node" style="--orbit-index: 0">
+                  <div class="orbit-node-inner">
+                    <span class="orbit-badge orbit-badge--figma"><i class="fab fa-figma"></i></span>
+                  </div>
+                </div>
+                <div class="orbit-node" style="--orbit-index: 1">
+                  <div class="orbit-node-inner">
+                    <span class="orbit-badge orbit-badge--angular"><i class="fab fa-angular"></i></span>
+                  </div>
+                </div>
+                <div class="orbit-node" style="--orbit-index: 2">
+                  <div class="orbit-node-inner">
+                    <span class="orbit-badge orbit-badge--wordpress"><i class="fab fa-wordpress"></i></span>
+                  </div>
+                </div>
+                <div class="orbit-node" style="--orbit-index: 3">
+                  <div class="orbit-node-inner">
+                    <span class="orbit-badge orbit-badge--shopify"><i class="fab fa-shopify"></i></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="orbit-ring orbit-ring--inner">
+                <div class="orbit-node" style="--orbit-index: 0">
+                  <div class="orbit-node-inner">
+                    <span class="orbit-badge orbit-badge--html"><i class="fab fa-html5"></i></span>
+                  </div>
+                </div>
+                <div class="orbit-node" style="--orbit-index: 1">
+                  <div class="orbit-node-inner">
+                    <span class="orbit-badge orbit-badge--css"><i class="fab fa-css3-alt"></i></span>
+                  </div>
+                </div>
+                <div class="orbit-node" style="--orbit-index: 2">
+                  <div class="orbit-node-inner">
+                    <span class="orbit-badge orbit-badge--js"><i class="fab fa-js"></i></span>
+                  </div>
+                </div>
+                <div class="orbit-node" style="--orbit-index: 3">
+                  <div class="orbit-node-inner">
+                    <span class="orbit-badge orbit-badge--react"><i class="fab fa-react"></i></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-avatar-ring" aria-hidden="true"></div>
+
+              <div class="hero-avatar">
+                <span class="hero-avatar-pulse" aria-hidden="true"></span>
+                <span class="hero-avatar-pulse hero-avatar-pulse--delay" aria-hidden="true"></span>
+                <div class="hero-avatar-inner">
+                  <span class="hero-avatar-text">M.A</span>
+                  <span class="hero-avatar-sub">FRONTEND DEV</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="home-scroll-indicator" aria-label="Scroll to about section">
+        <span class="home-scroll-mouse">
+          <span class="home-scroll-wheel"></span>
+        </span>
+        <span class="home-scroll-text">Scroll Down</span>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="about-bg-accent" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="section-title scroll-fade" data-scroll data-scroll-speed="0.08" data-scroll-direction="up">About
+          <span class="text-accent">Me</span>
+        </h2>
+
+        <div class="about-container grid">
+          <div class="about-image scroll-fade" data-scroll data-scroll-speed="0.16" data-scroll-direction="left"
+            data-scroll-rotate="-3">
+            <div class="about-image-frame">
+              <span class="about-image-badge"><i class="fas fa-laptop-code"></i> Developer</span>
+              <div class="about-image-shine" aria-hidden="true"></div>
+              <img src="images/Ayan.jpeg" alt="Ayan profile photo" class="about-img">
+              <span class="about-corner about-corner--tl" aria-hidden="true"></span>
+              <span class="about-corner about-corner--br" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="about-content scroll-fade" data-scroll data-scroll-speed="0.16" data-scroll-direction="right"
+            data-scroll-rotate="3">
+            <span class="about-tag"><i class="fas fa-user"></i> Who I Am</span>
+            <h3 class="about-subtitle">Front-end Developer & Designer</h3>
+            <p class="about-description">
+              I'm a creative and detail-oriented developer with a passion for building
+              exceptional digital experiences. With a strong foundation in modern web
+              technologies, I specialize in crafting responsive websites and intuitive
+              user interfaces that leave a lasting impression.
+            </p>
+
+            <ul class="about-info">
+              <li class="about-info-item">
+                <span class="about-info-icon"><i class="fas fa-cake-candles"></i></span>
+                <div class="about-info-text">
+                  <span class="about-info-label">Age</span>
+                  <span class="about-info-value">19</span>
+                </div>
+              </li>
+              <li class="about-info-item">
+                <span class="about-info-icon"><i class="fas fa-envelope"></i></span>
+                <div class="about-info-text">
+                  <span class="about-info-label">Email</span>
+                  <span class="about-info-value">mohdayan4673@gmail.com</span>
+                </div>
+              </li>
+              <li class="about-info-item">
+                <span class="about-info-icon"><i class="fas fa-phone"></i></span>
+                <div class="about-info-text">
+                  <span class="about-info-label">Phone</span>
+                  <span class="about-info-value">+91 9917023652</span>
+                </div>
+              </li>
+              <li class="about-info-item">
+                <span class="about-info-icon"><i class="fas fa-location-dot"></i></span>
+                <div class="about-info-text">
+                  <span class="about-info-label">Address</span>
+                  <span class="about-info-value">Noida, Uttar Pradesh, India</span>
+                </div>
+              </li>
+            </ul>
+
+            <!-- <div class="about-stats grid">
+              <div class="about-stat-card scroll-fade" data-scroll data-scroll-speed="0.12" data-scroll-direction="up">
+                <span class="about-stat-icon"><i class="fas fa-briefcase"></i></span>
+                <h3 class="about-stat-number" data-target="3">1+</h3>
+                <span class="about-stat-label">Years Experience</span>
+              </div>
+              <div class="about-stat-card scroll-fade" data-scroll data-scroll-speed="0.14" data-scroll-direction="up">
+                <span class="about-stat-icon"><i class="fas fa-folder-open"></i></span>
+                <h3 class="about-stat-number" data-target="100">10+</h3>
+                <span class="about-stat-label">Projects Done</span>
+              </div>
+              <div class="about-stat-card scroll-fade" data-scroll data-scroll-speed="0.16" data-scroll-direction="up">
+                <span class="about-stat-icon"><i class="fas fa-face-smile"></i></span>
+                <h3 class="about-stat-number" data-target="100">100%
+                </h3>
+                <span class="about-stat-label">Happy Clients</span>
+              </div>
+            </div> -->
+
+            <div class="about-stats grid">
+              <div class="about-stat-card scroll-fade" data-scroll data-scroll-speed="0.12" data-scroll-direction="up">
+                <span class="about-stat-icon">
+                  <i class="fas fa-briefcase"></i>
+                </span>
+                <h3 class="about-stat-number" data-target="1">0</h3>
+                <span class="about-stat-label">Years Experience</span>
+              </div>
+            
+              <div class="about-stat-card scroll-fade" data-scroll data-scroll-speed="0.14" data-scroll-direction="up">
+                <span class="about-stat-icon">
+                  <i class="fas fa-folder-open"></i>
+                </span>
+                <h3 class="about-stat-number" data-target="10">0</h3>
+                <span class="about-stat-label">Projects Completed</span>
+              </div>
+            
+              <div class="about-stat-card scroll-fade" data-scroll data-scroll-speed="0.16" data-scroll-direction="up">
+                <span class="about-stat-icon">
+                  <i class="fas fa-face-smile"></i>
+                </span>
+                <h3 class="about-stat-number" data-target="100">0</h3>
+                <span class="about-stat-label">Client Satisfaction</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <h2 class="section-title">My <span class="text-accent">Skills</span></h2>
+
+        <div class="skills-container">
+          <!-- <div class="skill-card">
+            <i class="fab fa-figma skill-icon figma"></i>
+            <span class="skill-name">Figma</span>
+          </div> -->
+          <div class="skill-card">
+            <i class="fab fa-html5 skill-icon html"></i>
+            <span class="skill-name">HTML5</span>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-css3-alt skill-icon css"></i>
+            <span class="skill-name">CSS3</span>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-js skill-icon js"></i>
+            <span class="skill-name">JS</span>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-react skill-icon react"></i>
+            <span class="skill-name">React</span>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-angular skill-icon angular"></i>
+            <span class="skill-name">Angular</span>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-node-js skill-icon node"></i>
+            <span class="skill-name">Node</span>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-wordpress skill-icon wordpress"></i>
+            <span class="skill-name">WP</span>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-bootstrap skill-icon bootstrap"></i>
+            <span class="skill-name">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+      <div class="container">
+        <h2 class="section-title scroll-fade" data-scroll data-scroll-speed="0.08" data-scroll-direction="up">My <span
+            class="text-accent">Services</span></h2>
+
+        <div class="services-container grid">
+          <article class="service-card scroll-fade" data-scroll data-scroll-speed="0.14" data-scroll-direction="left"
+            data-scroll-rotate="2">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-description">
+              Building responsive, fast, and modern websites using HTML, CSS, JavaScript, Angular, and WordPress. I
+              focus on performance, accessibility, and creating seamless user experiences across all devices
+            </p>
+          </article>
+
+          <article class="service-card scroll-fade" data-scroll data-scroll-speed="0.14" data-scroll-direction="up">
+            <div class="service-icon">
+              <i class="fas fa-pen-nib"></i>
+            </div>
+            <h3 class="service-title">WordPress Development</h3>
+            <p class="service-description">
+              Creating custom WordPress websites, landing pages, business websites, and portfolio sites. From theme
+              customization to responsive layouts and performance optimization, I deliver websites that are easy to
+              manage and scale.
+            </p>
+          </article>
+
+          <article class="service-card scroll-fade" data-scroll data-scroll-speed="0.14" data-scroll-direction="right"
+            data-scroll-rotate="-2">
+            <div class="service-icon">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h3 class="service-title">UI Implementation & Responsive Design</h3>
+            <p class="service-description">
+              Transforming UI designs into pixel-perfect, fully responsive websites. I ensure consistency across
+              desktop, tablet, and mobile devices while maintaining clean code and excellent user experience.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <h2 class="section-title scroll-fade" data-scroll data-scroll-speed="0.08" data-scroll-direction="up">My <span
+            class="text-accent">Experience</span></h2>
+
+        <div class="timeline">
+          <div class="timeline-item left scroll-fade" data-scroll data-scroll-speed="0.15" data-scroll-direction="left">
+            <div class="timeline-content">
+              <span class="timeline-date">2026 - Present</span>
+              <h3 class="timeline-title">WordPress Developer</h3>
+              <h4 class="timeline-company">AHA Technocrats, Noida</h4>
+              <p class="timeline-description">
+                Designed and developed professional WordPress websites for businesses and clients using WordPress,
+                Elementor, HTML, CSS, and JavaScript. Focused on responsive design, performance optimization, SEO best
+                practices, and creating engaging user experiences.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item right scroll-fade" data-scroll data-scroll-speed="0.15"
+            data-scroll-direction="right">
+            <div class="timeline-content">
+              <span class="timeline-date">July 2025</span>
+              <h3 class="timeline-title">Frontend Developer</h3>
+              <h4 class="timeline-company">AHA Technocrats, Noida</h4>
+              <p class="timeline-description">
+                Developing responsive and user-friendly websites using HTML, CSS, JavaScript, Angular, and WordPress.
+                Collaborating with designers and developers to create modern web experiences, optimize website
+                performance, and ensure seamless functionality across all devices and browsers.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item left scroll-fade" data-scroll data-scroll-speed="0.15" data-scroll-direction="left">
+            <div class="timeline-content">
+              <span class="timeline-date">August 2025 - January 2026</span>
+              <h3 class="timeline-title">Frontend Development Training</h3>
+              <h4 class="timeline-company">Ducat Institute</h4>
+              <p class="timeline-description">
+                Successfully completed a 6-month Frontend Development Training program and earned a certification.
+                Gained hands-on experience in HTML, CSS, JavaScript, Responsive Web Design, Angular, Bootstrap, and
+                modern web development practices through practical projects and real-world assignments.
+              </p>
+            </div>
+          </div>
+
+          <!-- <div class="timeline-item right scroll-fade" data-scroll data-scroll-speed="0.15"
+            data-scroll-direction="right">
+            <div class="timeline-content">
+              <span class="timeline-date">2019 - 2020</span>
+              <h3 class="timeline-title">Junior Web Developer</h3>
+              <h4 class="timeline-company">StartUp Hub</h4>
+              <p class="timeline-description">
+                Built and maintained company websites using HTML, CSS, JavaScript, and
+                WordPress. Assisted in implementing SEO strategies and performance
+                optimizations.
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="portfolio">
+      <div class="portfolio-bg-accent" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="section-title scroll-fade" data-scroll data-scroll-speed="0.08" data-scroll-direction="up">My <span
+            class="text-accent">Portfolio</span></h2>
+        <p class="portfolio-intro scroll-fade">Selected live projects — hover to preview, click to visit.</p>
+
+        <div class="portfolio-container grid">
+          <article class="portfolio-item scroll-fade" data-scroll data-scroll-speed="0.13" data-scroll-direction="left">
+            <div class="portfolio-card">
+              <img src="images/The-selwish.jpg" alt="The Self Wish website" class="portfolio-img">
+              <span class="portfolio-tag">E-Commerce</span>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Live Project</span>
+                <h3 class="portfolio-title">The Self Wish</h3>
+                <p class="portfolio-desc">Wellness & lifestyle platform</p>
+                <a href="https://theselfwish.com/" target="_blank" rel="noopener" class="portfolio-link" aria-label="Visit The Self Wish">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                  <span>View Site</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-item scroll-fade" data-scroll data-scroll-speed="0.13" data-scroll-direction="right">
+            <div class="portfolio-card">
+              <img src="images/Aha-technocrats.avif" alt="Aha Technocrats website" class="portfolio-img">
+              <span class="portfolio-tag">Corporate</span>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Live Project</span>
+                <h3 class="portfolio-title">Aha Technocrats</h3>
+                <p class="portfolio-desc">Technology solutions company</p>
+                <a href="https://aha-technocrats.com/" target="_blank" rel="noopener" class="portfolio-link" aria-label="Visit Aha Technocrats">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                  <span>View Site</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-item scroll-fade" data-scroll data-scroll-speed="0.13" data-scroll-direction="up">
+            <div class="portfolio-card">
+              <img src="images/Amu.jpg" alt="Aligarh Muslim University website" class="portfolio-img">
+              <span class="portfolio-tag">Education</span>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Live Project</span>
+                <h3 class="portfolio-title">Aligarh Muslim University</h3>
+                <p class="portfolio-desc">University portal & information</p>
+                <a href="https://www.amu.ac.in/" target="_blank" rel="noopener" class="portfolio-link" aria-label="Visit AMU">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                  <span>View Site</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-item scroll-fade" data-scroll data-scroll-speed="0.13" data-scroll-direction="left">
+            <div class="portfolio-card">
+              <img src="images/Omics-logics.jpg" alt="Omics Logics website" class="portfolio-img">
+              <span class="portfolio-tag">BioTech</span>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Live Project</span>
+                <h3 class="portfolio-title">Omics Logics</h3>
+                <p class="portfolio-desc">Bioinformatics & data platform</p>
+                <a href="https://omicslogics.com/" target="_blank" rel="noopener" class="portfolio-link" aria-label="Visit Omics Logics">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                  <span>View Site</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-item scroll-fade" data-scroll data-scroll-speed="0.13" data-scroll-direction="right">
+            <div class="portfolio-card">
+              <img src="images/Pasha-contactor.webp" alt="Pasha Contractor website" class="portfolio-img">
+              <span class="portfolio-tag">Construction</span>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Live Project</span>
+                <h3 class="portfolio-title">Pasha Contractor</h3>
+                <p class="portfolio-desc">Construction & contracting services</p>
+                <a href="https://pashacontractors.com/" target="_blank" rel="noopener" class="portfolio-link" aria-label="Visit Pasha Contractor">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                  <span>View Site</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-item scroll-fade" data-scroll data-scroll-speed="0.13" data-scroll-direction="up">
+            <div class="portfolio-card">
+              <img src="images/Zyat.webp" alt="Zaytherbal website" class="portfolio-img">
+              <span class="portfolio-tag">Herbal</span>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Live Project</span>
+                <h3 class="portfolio-title">Zaytherbal</h3>
+                <p class="portfolio-desc">Herbal products & wellness store</p>
+                <a href="https://zaytherbal.com/" target="_blank" rel="noopener" class="portfolio-link" aria-label="Visit Zaytherbal">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                  <span>View Site</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section-title scroll-fade" data-scroll data-scroll-speed="0.08" data-scroll-direction="up">Contact
+          <span class="text-accent">Me</span>
+        </h2>
+
+        <div class="contact-container grid">
+          <div class="contact-info">
+            <div class="contact-info-head scroll-fade" data-scroll data-scroll-speed="0.12" data-scroll-direction="left">
+              <span class="contact-tag"><i class="fas fa-handshake"></i> Get In Touch</span>
+              <h3 class="contact-info-title">Let's <span class="text-accent">Connect</span></h3>
+              <p class="contact-info-text">
+                I'm open to freelance projects, collaborations, and full-time roles.
+                Feel free to reach out — I'll get back to you as soon as possible.
+              </p>
+            </div>
+
+            <div class="contact-info-list">
+              <a href="mailto:ankit@example.com" class="contact-card scroll-fade"
+                data-scroll data-scroll-speed="0.14" data-scroll-direction="left">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-details">
+                  <h3 class="contact-title">Email</h3>
+                  <p class="contact-text">mohdayan4673@gmail.com</p>
+                </div>
+              </a>
+
+              <a href="tel:+919876543210" class="contact-card scroll-fade"
+                data-scroll data-scroll-speed="0.16" data-scroll-direction="left">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <div class="contact-details">
+                  <h3 class="contact-title">Phone</h3>
+                  <p class="contact-text">+91 9917023652</p>
+                </div>
+              </a>
+
+              <div class="contact-card scroll-fade" data-scroll data-scroll-speed="0.18" data-scroll-direction="left">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-details">
+                  <h3 class="contact-title">Location</h3>
+                  <p class="contact-text">Noida, Uttar Pradesh, India</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social-wrap scroll-fade" data-scroll data-scroll-speed="0.2" data-scroll-direction="left">
+              <span class="contact-social-title">Follow Me</span>
+              <div class="contact-social">
+                <a href="https://github.com/ayan-the-software-maker" target="_blank" rel="noopener" class="contact-social-link" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mohd-ayan-pasha/" target="_blank" rel="noopener" class="contact-social-link" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/+919917023652" target="_blank" rel="noopener" class="contact-social-link" aria-label="WhatsApp">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/mohd.ayan7102" target="_blank" rel="noopener" class="contact-social-link" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper scroll-fade" data-scroll data-scroll-speed="0.18"
+            data-scroll-direction="right">
+            <div class="contact-form-box">
+              <h3 class="contact-form-title">Send a Message</h3>
+
+              <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form">
+                <input type="hidden" name="access_key" value="1133c26e-5a15-4ed3-a715-1807c2cdaa38">
+                <input type="checkbox" name="botcheck" class="contact-form-honeypot" tabindex="-1" autocomplete="off">
+
+                <div class="form-field">
+                  <label for="contact-name">Name</label>
+                  <input type="text" id="contact-name" name="name" placeholder="Your name" required autocomplete="name">
+                </div>
+
+                <div class="form-field">
+                  <label for="contact-email">Email</label>
+                  <input type="email" id="contact-email" name="email" placeholder="you@example.com" required
+                    autocomplete="email">
+                </div>
+
+                <div class="form-field">
+                  <label for="contact-message">Message</label>
+                  <textarea id="contact-message" name="message" rows="5" placeholder="Write your message…"
+                    required></textarea>
+                </div>
+
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+                <button type="submit" class="btn btn-primary btn-submit">
+                  <span class="btn-submit-text">Send Message</span>
+                  <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container container">
+      <p class="footer-text">
+        Copyright &copy; 2026 by Mohd Ayan | All Rights Reserved.
+      </p>
+      <a href="images/Mohd-Ayan Resume.pdf" class="btn btn-primary btn-sm" download>DOWNLOAD CV</a>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#home" class="scroll-top" id="scroll-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Calendly Widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

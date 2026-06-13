@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mohd Ayan Portfolio">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a303c"/>
+      <stop offset="100%" stop-color="#1f242d"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4757"/>
+      <stop offset="100%" stop-color="#e63946"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="url(#ring)" stroke-width="3"/>
+  <circle cx="32" cy="32" r="18" fill="#323946"/>
+  <text x="32" y="36" font-family="Poppins, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">M.A</text>
+  <circle cx="48" cy="16" r="4" fill="#e63946"/>
+</svg>
