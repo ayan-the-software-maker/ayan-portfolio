@@ -412,6 +412,23 @@ button {
   display: none;
   font-size: 1.4rem;
   color: var(--text-primary);
+  z-index: 101;
+}
+
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-bg);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+body.nav-open .nav-overlay {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ==================== HOME / HERO ==================== */
@@ -1681,7 +1698,7 @@ button {
 }
 
 .portfolio-container {
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 1.25rem;
 }
 
@@ -2188,10 +2205,33 @@ a.contact-card:hover {
 }
 
 /* ==================== RESPONSIVE ==================== */
+
+/* Large tablets & small laptops */
+@media screen and (max-width: 1200px) {
+  :root {
+    --container-padding: 0 1.25rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+/* Tablets */
 @media screen and (max-width: 992px) {
+  :root {
+    --section-padding: 5rem 0;
+    --section-padding-home: calc(var(--header-height) + 1.75rem) 0 4.5rem;
+  }
+
   .home-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2rem;
+  }
+
+  .home-content {
+    order: 2;
   }
 
   .home-description {
@@ -2205,7 +2245,7 @@ a.contact-card:hover {
   }
 
   .home-image {
-    order: -1;
+    order: 1;
   }
 
   .hero-visual-wrap {
@@ -2226,19 +2266,43 @@ a.contact-card:hover {
 
   .about-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .about-image {
     max-width: 400px;
     margin: 0 auto;
+    width: 100%;
   }
 
   .about-info {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+    gap: 0.65rem;
+  }
+
+  .skill-card {
+    flex: 0 1 calc(20% - 0.65rem);
+    min-width: 85px;
+    max-width: none;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 
   .contact-container {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .contact-info {
@@ -2280,15 +2344,47 @@ a.contact-card:hover {
   .timeline-item.left::before,
   .timeline-item.right::before {
     left: 11px;
+    right: auto;
+  }
+
+  [data-scroll] {
+    transform: none !important;
+    transition: none !important;
   }
 }
 
+/* Mobile landscape & small tablets */
 @media screen and (max-width: 768px) {
   :root {
+    --header-height: 4rem;
     --section-padding: 4.25rem 0;
     --section-padding-compact: 3.5rem 0;
-    --section-padding-home: calc(var(--header-height) + 1.5rem) 0 4rem;
+    --section-padding-home: calc(var(--header-height) + 1.25rem) 0 3.5rem;
     --section-gap: 1rem;
+    --container-padding: 0 1rem;
+  }
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .home {
+    min-height: auto;
+    padding: var(--section-padding-home);
+  }
+
+  .home-name {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .home-title {
+    font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+    min-height: 2.25rem;
+  }
+
+  .home-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .home-scroll-indicator {
@@ -2296,25 +2392,46 @@ a.contact-card:hover {
   }
 
   .home-orbs {
-    opacity: 0.5;
+    opacity: 0.4;
   }
 
   #particles-js canvas {
-    opacity: 0.7;
+    opacity: 0.6;
+  }
+
+  .hero-visual-wrap {
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .hero-orbit-system {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .nav-overlay {
+    display: block;
   }
 
   .nav-menu {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 75%;
-    max-width: 320px;
+    width: min(85%, 300px);
     height: 100vh;
+    height: 100dvh;
     background: var(--bg-secondary);
-    padding: 5rem 2rem 2rem;
+    padding: 5rem 1.75rem 2rem;
     transition: right 0.4s ease;
     box-shadow: var(--shadow-lg);
     z-index: 100;
+    overflow-y: auto;
   }
 
   .nav-menu.show {
@@ -2323,63 +2440,366 @@ a.contact-card:hover {
 
   .nav-list {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
+    align-items: flex-start;
   }
 
   .nav-link {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    display: block;
+    width: 100%;
+    padding: 0.25rem 0;
   }
 
   .nav-toggle,
   .nav-close {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
   }
 
   .nav-close {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    font-size: 1.5rem;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 1.4rem;
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-actions {
+    gap: 0.65rem;
   }
 
   .nav-actions .btn-sm {
     display: none;
   }
 
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .about-img {
+    height: 320px;
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+  }
+
   .about-stats {
     grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .about-stat-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+  }
+
+  .about-stat-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .about-stat-number {
+    font-size: 1.5rem;
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+    overflow-x: visible;
+    padding: 0;
+  }
+
+  .skill-card {
+    flex: none;
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+    padding: 0.85rem 0.4rem;
+  }
+
+  .skill-icon {
+    font-size: 1.5rem;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .portfolio-intro {
+    font-size: 0.88rem;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  .contact.section {
+    padding-bottom: 5.5rem;
+  }
+
+  .contact-info,
+  .contact-form-box {
+    padding: 1.35rem;
+  }
+
+  .contact-info-title {
+    font-size: 1.2rem;
   }
 
   .footer-container {
     flex-direction: column;
     text-align: center;
+    gap: 0.85rem;
+  }
+
+  .footer-text {
+    font-size: 0.82rem;
+  }
+
+  .scroll-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 42px;
+    height: 42px;
+  }
+
+  .section:not(.home):not(.section-visible) .container {
+    transform: translateY(12px);
+    opacity: 0.95;
+  }
+
+  .scroll-animate {
+    transition-duration: 0.5s;
   }
 }
 
+/* Small phones */
 @media screen and (max-width: 480px) {
+  :root {
+    --section-padding: 3.5rem 0;
+    --section-padding-home: calc(var(--header-height) + 1rem) 0 3rem;
+    --container-padding: 0 0.85rem;
+  }
+
+  .home-social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
   .home-buttons {
     flex-direction: column;
     width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   .home-buttons .btn {
     width: 100%;
   }
 
+  .hero-visual-wrap {
+    max-width: 260px;
+    height: 260px;
+  }
+
+  .hero-orbit-system {
+    width: 230px;
+    height: 230px;
+  }
+
+  .orbit-badge {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .hero-avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-avatar-ring {
+    width: 165px;
+    height: 165px;
+  }
+
+  .about-img {
+    height: 280px;
+  }
+
+  .about-subtitle {
+    font-size: 1.25rem;
+  }
+
   .skills-container {
-    justify-content: flex-start;
-    gap: 0.45rem;
-    padding-bottom: 0.75rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
   }
 
   .skill-card {
-    flex: 0 0 72px;
-    min-width: 72px;
-    max-width: 72px;
+    padding: 0.7rem 0.3rem;
+  }
+
+  .skill-icon {
+    font-size: 1.35rem;
+  }
+
+  .skill-name {
+    font-size: 0.6rem;
   }
 
   .portfolio-container {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-card {
+    aspect-ratio: 16 / 11;
+  }
+
+  .portfolio-title {
+    font-size: 1rem;
+  }
+
+  .timeline-item {
+    padding-left: 3rem;
+    padding-right: 0.5rem;
+  }
+
+  .timeline-content {
+    padding: 1.25rem;
+  }
+
+  .timeline-title {
+    font-size: 1.05rem;
+  }
+
+  .contact-card {
+    padding: 1rem;
+    gap: 0.85rem;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 0.95rem;
+  }
+
+  .contact-text {
+    font-size: 0.82rem;
+    word-break: break-word;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    font-size: 16px;
+    padding: 0.8rem 0.9rem;
+  }
+}
+
+/* Very small phones */
+@media screen and (max-width: 360px) {
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .home-name {
+    font-size: 1.85rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-image-badge {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.65rem;
+  }
+}
+
+/* Touch devices — show portfolio info without hover */
+@media (hover: none) and (pointer: coarse) {
+  .portfolio-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(31, 36, 45, 0.92) 0%,
+      rgba(31, 36, 45, 0.45) 50%,
+      transparent 100%
+    );
+    padding: 1rem;
+  }
+
+  .portfolio-category,
+  .portfolio-title,
+  .portfolio-desc,
+  .portfolio-link {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .portfolio-title {
+    font-size: 1rem;
+  }
+
+  .portfolio-desc {
+    margin-bottom: 0.35rem;
+    font-size: 0.78rem;
+  }
+
+  .portfolio-item:hover .portfolio-card {
+    transform: none;
+  }
+
+  .portfolio-item:hover .portfolio-img {
+    transform: none;
+    filter: brightness(0.85);
+  }
+
+  .service-card:hover,
+  .about-stat-card:hover,
+  .about-info-item:hover,
+  .timeline-content:hover {
+    transform: none;
+  }
+
+  .orbit-badge:hover {
+    scale: 1;
+  }
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+  [data-theme="light"] .portfolio-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(26, 29, 35, 0.9) 0%,
+      rgba(26, 29, 35, 0.4) 50%,
+      transparent 100%
+    );
   }
 }
 
